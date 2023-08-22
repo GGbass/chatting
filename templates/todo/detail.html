@@ -1,0 +1,15 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %} Tarea {{todo.title}} {% endblock  %}
+
+{% block 'content' %}
+
+<span class = "aux-btn"><a href="{%url 'todo'%}">Volver </a></span>
+<ul class="list">
+    <li><b>Titulo :</b>{{todo.title}}</li>
+    <li><b>Descripcion:</b>{{todo.description}}</li>
+    <li><b>Fecha de creacion:</b>{{todo.date}}</li>
+    <li><b>Fecha estimada:</b>{{todo.estimated_end}}</li>
+    <li><b>Prioridad 1..5:</b>{{todo.priority}}</li>
+</ul>
+{% endblock  %}
